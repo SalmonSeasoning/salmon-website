@@ -109,3 +109,6 @@ div#youtube-btn {
 div#steam-btn {
   background-image: url('/assets/Steam.png');
 }
+div#discord-btn {
+  background-image: url('/assets/Discord.png');
+}
