@@ -331,6 +331,9 @@ div.container {
 	99% { 
 	 opacity: 99%; 
 	}
+	100% {
+	 opacity: 100%;
+	}
 
 }
 div.anon-hacker {
