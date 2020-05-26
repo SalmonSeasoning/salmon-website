@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>You have been hacked!</title>
+        <link rel="stylesheet" href="./style.css" type="text/css" />
+    </head>
+    <body>
+        <div id="header">
+            <h1>G37 D3F4C3D N00B!</h1>
+            <h3>H4ck3d by SalmonSeasoning</h3>
+        </div>
+        <div class="container" style="text-align: center; margin-bottom: 40px;">
+            <span class="hacker-typer" data-type-content="Your site got hijacked. Want it back? Pay $5000 (USD) in Bitcoin to BITCOIN ADDRESS"></span>
+        </div>
+        <div class="anon-hacker"></div>
+    <script type="text/javascript" defer>
+        (()=>{
+            let hackertyperarray = [];
+
+            for(let i = 0; i < document.getElementsByClassName('hacker-typer').length; ++i)
+            {
+                var x = document.getElementsByClassName('hacker-typer')[i];
+                if(x.getAttribute('data-type-content') != undefined)
+                    hackertyperarray.push(x);
+            }
+
+
+            var x = setInterval(()=>{
+                for(let elem = 0; elem < hackertyperarray.length; ++elem)
+                {
+                    if(hackertyperarray[elem].innerHTML.length < hackertyperarray[elem].getAttribute('data-type-content').length)
+                    {
+                        hackertyperarray[elem].innerHTML += hackertyperarray[elem].getAttribute('data-type-content')[hackertyperarray[elem].innerHTML.length];
+                    }else
+                    {
+                        hackertyperarray.splice(elem, 1);
+                        --elem;
+                    }
+                }
+
+                if(hackertyperarray.length <= 0) clearInterval(x);
+
+            }, 75);
+            
+
+        })();
+    </script>
+    </body>
+</html>
