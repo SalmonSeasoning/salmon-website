@@ -94,21 +94,24 @@ div#social-container div.social-btn:hover{
   background-color: #b00;
 }
 div#twitter-btn {
-  background-image: url('/assets/Twitter.png');
+  background-image: url('./assets/Twitter.png');
 }
 div#github-btn
 {
-  background-image: url('/assets/GitHub.png');
+  background-image: url('./assets/GitHub.png');
 }
 div#email-btn {
-  background-image: url('/assets/Email.png');
+  background-image: url('./assets/Email.png');
 }
 div#youtube-btn {
-  background-image: url('/assets/YouTube.png');
+  background-image: url('./assets/YouTube.png');
 }
 div#steam-btn {
-  background-image: url('/assets/Steam.png');
+  background-image: url('./assets/Steam.png');
 }
 div#discord-btn {
-  background-image: url('/assets/Discord.png');
+  background-image: url('./assets/Discord.png');
+}
+div#twitch-btn {
+  background-image: url('./assets/Twitch.png');
 }
