@@ -27,4 +27,132 @@
   </div>
 </body>
 
+<script type="text/javascript">
+  (function() {
+    // Check if cookie is set
+    const cookies = decodeURIComponent(document.cookie);
+    var foundCookie = false;
+    for(let cookie of cookies.split(';'))
+    {
+      const cookieArgs = cookie.split('=');
+      if(cookieArgs[0] == "cookiesAcknowledgement")
+        if(cookieArgs[1] == "true")
+        {
+          foundCookie = true;
+          console.log('Cookie script: Found cookie agreement.');
+          break;
+        }
+    }
+    if(!foundCookie)
+    {
+      var a = document.createElement('div'),
+        b = document.createElement('span'),
+        c = document.createElement('a'),
+        d = document.createElement('button'),
+        e = document.createElement('img');
+      a.style.width = '100vw';
+      a.style.position = 'fixed';
+      a.style.bottom = '0';
+      a.style.left = '0';
+      a.style.background = '#fff';
+      a.style.textAlign = 'center';
+      a.style.padding = '2px 0px 2px 0px';
+      b.style.marginRight = '40px';
+      d.style.background = '#eee';
+      d.style.padding = '1px 3px 1px 3px';
+      d.style.borderRadius = '5px';
+      d.style.border = '1px solid #ccc';
+      d.style.fontWeight = '900';
+      d.style.cursor = 'pointer';
+      e.style.display = 'block';
+      e.style.width = '90%';
+      e.style.margin = '0 auto';
+      b.innerHTML = 'This site may use cookies to enhance your experience and improve site security. ';
+      c.innerHTML = 'Learn more';
+      d.innerHTML = 'OK';
+      c.setAttribute('href', '#');
+      e.setAttribute('src', 'output.gif');
+      e.setAttribute('alt', '(IMAGE/GIF) Removing cookies in Chromium');
+      document.body.appendChild(a);
+      a.appendChild(b);
+      b.appendChild(c);
+      a.appendChild(d);
+      c.addEventListener('click', () => {
+        var a = document.createElement('div'), 
+          b = document.createElement('div'),
+          c = document.createElement('button'),
+          d = document.createElement('h1'),
+          f = document.createElement('p');
+        a.style.position = 'fixed';
+        a.style.top = '0';
+        a.style.left = '0';
+        a.style.width = '100vw';
+        a.style.height = '100vh';
+        a.style.padding = '0';
+        a.style.margin = '0';
+        a.style.background = 'rgba(0,0,0,0.5)';
+        a.style.zIndex = '9999';
+        a.style.display = 'flex';
+        a.style.justifyContent = 'center';
+        a.style.alignItems = 'center';
+        b.style.display = 'block';
+        b.style.margin = '0 auto';
+        b.style.width = '90vw';
+        b.style.height = '90vh';
+        b.style.background = '#fff';
+        b.style.overflow = 'auto';
+        b.style.padding = '6px 20px 6px 20px';
+        c.style.background = '#eee';
+        c.style.padding = '1px 3px 1px 3px';
+        c.style.borderRadius = '100%';
+        c.style.border = '1px solid #ccc';
+        c.style.fontWeight = '900';
+        c.style.cursor = 'pointer';
+        c.style.float = 'right';
+        c.style.padding = '2px 5px 2px 5px';
+        d.style.textAlign = 'center';
+        c.innerHTML = 'X';
+        d.innerHTML = 'Cookie Policy';
+        f.innerHTML = 'Cookies are files exchanged by webservers (websites) that contain certain necessary information for the site to operate correctly. ' +
+          'Oftentimes, cookies are used to track visitors across websites for analytical and even monetary purposes in the form of advertisements. ' +
+          'By continuing to visit and use this website, you agree to allowing the use of cookies for all intents and purposes, which include, but are not limited to: ' +
+          'Tracking, Advertising, Data Storage, and Identification. If you do not agree to the usage of these cookies, you can just avoid visiting this site. ' + 
+          'Any web traffic to or from this site could result in the exchange of data. If you would like to remove such cookies, below is an example of doing so on Chrome/Chromium.';
+        document.body.appendChild(a);
+        a.appendChild(b);
+        b.appendChild(c);
+        b.appendChild(document.createElement('br'));
+        b.appendChild(document.createElement('hr'));
+        b.appendChild(d);
+        b.appendChild(f);
+        b.appendChild(e);
+        c.addEventListener('click', () => {
+          try
+          {
+            document.body.removeChild(a);
+          }
+          catch(error)
+          {
+            console.error('Cookie script: Could not remove child from body.');
+          }
+        });
+      });
+      d.addEventListener('click', () => {
+        var d = new Date();
+        d.setTime(d.getTime() + 0x9FA52400);
+        document.cookie = `cookiesAcknowledgement=true; expires=${d.toUTCString()}; samesite=lax; path=/`;
+        console.log('Cookie script: Cookie usage acknowledged.');
+        try
+        {
+          document.body.removeChild(a);
+        }
+        catch(error)
+        {
+          console.error('Cookie script: Could not remove child from body.');
+        }
+      });
+  }
+  })();
+</script>
+
 </html>
