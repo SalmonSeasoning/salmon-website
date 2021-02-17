@@ -121,3 +121,6 @@ div#discord-btn {
 div#twitch-btn {
   background-image: url('./assets/Twitch.png');
 }
+div#donate-btn {
+  background-image: url('./assets/money_sack.png');
+}
